@@ -21,13 +21,13 @@ inputs:
     description: 'connection timeout to remote host'
     default: "30s"
     required: false
-  first_ssh:
+  before:
     description: 'execute pre-commands before scp'
     required: false
   scp:
     description: 'scp from local to remote'
     required: false
-  last_ssh:
+  after:
     description: 'execute post-commands after scp'
     required: false
 runs:

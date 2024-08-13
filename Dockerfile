@@ -9,6 +9,8 @@ LABEL "com.github.actions.description"="Pipeline: ssh -> scp -> ssh"
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="gray-dark"
 
+RUN sed -i 's|deb.debian.org|mirrors.tuna.tsinghua.edu.cn|g;s|security.debian.org|mirrors.tuna.tsinghua.edu.cn|g' /etc/apt/sources.list;
+
 RUN apt-get update -y && \
   apt-get install -y ca-certificates openssh-client openssl sshpass
 
